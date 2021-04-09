@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'aldo';
+    src: url('Aldo-SemiBold.eot');
+    src: url('Aldo-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Aldo-SemiBold.woff') format('woff'),
+        url('Aldo-SemiBold.ttf') format('truetype'),
+        url('Aldo-SemiBold.svg#Aldo-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aldo';
+    src: url('Aldo-SemiBold_1.eot');
+    src: url('Aldo-SemiBold_1.eot?#iefix') format('embedded-opentype'),
+        url('Aldo-SemiBold_1.woff') format('woff'),
+        url('Aldo-SemiBold_1.ttf') format('truetype'),
+        url('Aldo-SemiBold_1.svg#Aldo-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
