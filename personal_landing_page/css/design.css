@@ -34,19 +34,19 @@ header #next_section{
 }
 
 header #prev_section{
-    right: 35px;
+     right: 35px; 
 }
 
 header #next_section{
-    right: 5px;
+     right: 5px; 
 }
 
 header #prev_section img,
 header #next_section img{
     width: 250%;
-    position: relative;
-    top: -20px;
+    top: -19px;
     left: -19px;
+    position: relative;
 }
 
 header #next_section img{
@@ -74,6 +74,37 @@ header #next_section img{
     header{
         height: 50px;
     }
+
+    header h1{
+        display: inline-block;
+        width: 20%;
+        min-width: 200px;
+        margin: 0px;
+        height: 50px;
+        line-height: 50px;
+        margin-left: 80px;
+    }
+
+    header h1 > * {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        color: white;
+        font-weight: lighter;
+        font-size: 0.5em;
+        margin: 0px 3px;
+    }
+
+    header h1 figure {
+        height: 40px;
+        width: 40px;
+        margin: 0px;
+    }
+
+    header h1 figure img{
+        width: 100%;
+    }
+
     header #prev_section,
     header #next_section{
         position: absolute;
