@@ -67,6 +67,45 @@
       <section class="slide" id="blog" style="display: none"></section>
     </div>
 
+    <div id="contact_form">
+      <form id="form1" name="form1" method="post" action="contact.php">
+        <div id="close_form" onClick="displayFormContact('none')"></div>
+        <figure id="logo_mensaje">
+          <img src="iconos/icon-17.png" alt="" />
+        </figure>
+
+        <p>Dí Hola!</p>
+
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Tu nombre"
+          onfocus="if(this.placeholder =='')this.placeholder ='Tu nombre'"
+        />
+
+        <input
+          id="email"
+          name="email"
+          type="text"
+          placeholder="Tu email"
+          onfocus="if(this.placeholder =='')this.placeholder ='Tu email'"
+        />
+
+        <textarea
+          id="message"
+          name="message"
+          type="text"
+          placeholder="Mensaje"
+          onfocus="if(this.placeholder =='')this.placeholder ='Mensaje'"
+        ></textarea>
+
+        <input type="submit" name="Submit" id="button" value="ENVIAR" />
+      </form>
+    </div>
+
+    <div id="contact_button" onClick="displayFormContact('block')"></div>
+
     <script src="js/design.js"></script>
   </body>
 </html>
