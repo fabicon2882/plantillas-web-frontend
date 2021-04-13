@@ -57,19 +57,60 @@
       </div>
     </header>
 
-    <script>
-      function displayMenu(){
-        var display;
-        var card_menu = document.getElementById("card_menu");
+    <script type="text/javascript">
+      alertSize();
+      function alertSize() {
+        var myWidth = 0,
+          myHeight = 0;
+        if (typeof window.innerWidth == "number") {
+          //No-IE
+          myWidth = window.innerWidth;
+          myHeight = window.innerHeight;
+        } else if (
+          document.documentElement &&
+          (document.documentElement.clientWidth ||
+            document.documentElement.clientHeight)
+        ) {
+          //IE 6+
+          myWidth = document.documentElement.clientWidth;
+          myHeight = document.documentElement.clientHeight;
+        } else if (
+          document.body &&
+          (document.body.clientWidth || document.body.clientHeight)
+        ) {
+          //IE 4 compatible
+          myWidth = document.body.clientWidth;
+          myHeight = document.body.clientHeight;
+        }
 
-        display = card_menu.style.display;
-        if(display == "none"){
-          card_menu.style.display="block";
-        }else{
-          card_menu.style.display="none";
+        var display;
+        var menu = document.getElementById("card_menu");
+       
+        display = menu.style.display;
+        
+
+        if(myWidth < 767){
+          menu.style.display = "none";
+        }else {
+          menu.style.display = "block";
+        }
+      }
+
+      function displayMenu() {
+        var start, end;
+        var menu = document.getElementById("card_menu");
+        var display = menu.style.display;
+
+        if (display == "none") {
+          start= -233;
+          end =0;
+          menu.style.display = "block";
+        } else {
+          start = 0;
+          end = -233;
+          menu.style.display = "none";
         }
       }
     </script>
-
   </body>
 </html>
