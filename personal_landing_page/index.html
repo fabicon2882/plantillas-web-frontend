@@ -49,68 +49,22 @@
         </div>
       </nav>
 
-      <div id="prev_section">
+      <div id="prev_section" onclick="displaySection('prev')">
         <img src="iconos/icon-08.png" alt="" />
       </div>
-      <div id="next_section">
+      <div id="next_section" onclick="displaySection('next')">
         <img src="iconos/icon-08.png" alt="" />
       </div>
     </header>
 
-    <script type="text/javascript">
-      alertSize();
-      function alertSize() {
-        var myWidth = 0,
-          myHeight = 0;
-        if (typeof window.innerWidth == "number") {
-          //No-IE
-          myWidth = window.innerWidth;
-          myHeight = window.innerHeight;
-        } else if (
-          document.documentElement &&
-          (document.documentElement.clientWidth ||
-            document.documentElement.clientHeight)
-        ) {
-          //IE 6+
-          myWidth = document.documentElement.clientWidth;
-          myHeight = document.documentElement.clientHeight;
-        } else if (
-          document.body &&
-          (document.body.clientWidth || document.body.clientHeight)
-        ) {
-          //IE 4 compatible
-          myWidth = document.body.clientWidth;
-          myHeight = document.body.clientHeight;
-        }
+    <div id="slider">
+      <section class="slide" id="home" style="display:block"></section>
+      <section class="slide" id="aboutme" style="display:none"></section>
+      <section class="slide" id="skills" style="display:none"></section>
+      <section class="slide" id="portfolio" style="display:none"></section>
+      <section class="slide" id="blog" style="display:none"></section>
+    </div>
 
-        var display;
-        var menu = document.getElementById("card_menu");
-       
-        display = menu.style.display;
-        
-
-        if(myWidth < 767){
-          menu.style.display = "none";
-        }else {
-          menu.style.display = "block";
-        }
-      }
-
-      function displayMenu() {
-        var start, end;
-        var menu = document.getElementById("card_menu");
-        var display = menu.style.display;
-
-        if (display == "none") {
-          start= -233;
-          end =0;
-          menu.style.display = "block";
-        } else {
-          start = 0;
-          end = -233;
-          menu.style.display = "none";
-        }
-      }
-    </script>
+    <script src="js/design.js"></script>
   </body>
 </html>

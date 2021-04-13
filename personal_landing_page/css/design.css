@@ -105,6 +105,21 @@ header #next_section img{
     transform: rotate(180deg);
 }
 
+#slider{
+    width: 100%;
+    position: relative;
+    height: 600px;
+    background: black;
+}
+
+#slider section.slide{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+
 /*Media Queries*/
 @media screen and (min-width: 480px){
     body{
