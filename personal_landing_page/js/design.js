@@ -104,5 +104,46 @@ function displaySection(nav) {
   menu.style.background = bkgr_menu;
 
   var contact = document.getElementById("contact_form");
-  contact.style.display = "none";
+  contact
 }
+
+
+function navSection(nav){
+    var sections = new Array(5);
+    sections[0] = "home";
+    sections[1] = "aboutme";
+    sections[2] = "skills";
+    sections[3] = "portfolio";
+    sections[4] = "blog";
+
+    var show;
+    var search;
+    var bkgr_body;
+    var bkgr_menu;
+
+    for (var i=0; i<5; i++){
+      search = document.getElementById(sections[i]);
+      search.style.display = "none";
+      if (nav == sections[i]){
+        search.style.display = "block";  
+        if (sections[i] == "home"){
+          bkgr_body = "#233D58";
+          bkgr_menu = "#233D58";
+        }
+        else{
+          bkgr_body = "#f5f5f5";
+          bkgr_menu = "#29abe2";
+        }
+        search.style.background = bkgr_body;
+        var menu = document.getElementsByTagName("header")[0];
+        menu.style.background = bkgr_menu; 
+      }
+    } 
+
+    if (window.innerWidth < 767){
+      var menu = document.getElementById("card_menu");
+      menu.style.display = "none";    
+    }
+
+
+  }

@@ -39,12 +39,14 @@
           </figure>
 
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre mí</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a onClick="navSection('home')" href="#">Home</a></li>
+            <li><a onClick="navSection('aboutme')" href="#">Sobre mí</a></li>
+            <li><a onClick="navSection('skills')" href="#">Skills</a></li>
+            <li><a onClick="navSection('portfolio')" href="#">Portfolio</a></li>
+            <li><a onClick="navSection('blog')" href="#">Blog</a></li>
+            <li>
+              <a onClick="displayFormContact('block')" href="#">Contacto</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -58,11 +60,11 @@
     </header>
 
     <div id="slider">
-      <section class="slide" id="home" style="display:block"></section>
-      <section class="slide" id="aboutme" style="display:none"></section>
-      <section class="slide" id="skills" style="display:none"></section>
-      <section class="slide" id="portfolio" style="display:none"></section>
-      <section class="slide" id="blog" style="display:none"></section>
+      <section class="slide" id="home" style="display: block"></section>
+      <section class="slide" id="aboutme" style="display: none"></section>
+      <section class="slide" id="skills" style="display: none"></section>
+      <section class="slide" id="portfolio" style="display: none"></section>
+      <section class="slide" id="blog" style="display: none"></section>
     </div>
 
     <script src="js/design.js"></script>
