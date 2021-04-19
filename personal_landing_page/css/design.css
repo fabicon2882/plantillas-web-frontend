@@ -2,7 +2,6 @@ body {
     font-size: 16px;
     font-family: 'aldo', sans-serif;
     /* background-color: #233D58; */
-    background-color: purple;
     position: relative;  /*buena practica para posicionar el resto de elementos*/
 }
 
@@ -11,6 +10,7 @@ header {
     height: 35px;
     background: #233D58;
     position: relative;
+    z-index: 999;
 }
 
 header h1{
@@ -109,34 +109,320 @@ header #next_section img{
     width: 100%;
     position: relative;
     height: 600px;
-    background: black;
 }
 
 #slider section.slide{
     position: absolute;
     width: 100%;
-    top: 0px;
+    top: -20px;
     left: 0px;
 }
 
+#slider #home{
+    background: #233D58;
+    font-family: 'aller';
+    position: relative;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+#slider #home .mainanimation{
+    width: 80%;
+    margin-left: 10%;
+    min-height: 300px;
+    position: absolute;
+}
+
+#slider #home .mainlogo{
+    background: none;
+    position: relative;
+    width: 60vw;
+    margin-left: 20vw;
+    min-height: 430px;
+}
+
+#slider #home .mainlogo h2{
+    font-size: 1.2em;
+    padding-top: 80px;
+    color: white;
+    font-weight: lighter;
+}
+
+#slider #home .mainlogo strong{
+    font-size: 2em;
+    font-family: 'aldo';
+    display: block;
+}
+
+#slider #home .mainlogo figure,
+#slider #home .mainlogo figure img{
+    width: 100%;
+    margin: 0;
+}
+
+#slider #home .buttonspage{
+    width: 100%;
+    text-align: center;
+}
+
+#slider #home .buttonspage > * {
+    display: inline-block;
+    width: 40%;
+    margin: 5px 2.5%;
+    color: white;
+    padding: 15px 2.5%;
+}
+
+#slider #home #contratame{
+    cursor: pointer;
+    background: #F8931F;
+}
+
+#slider #home a {
+    text-decoration: none;
+    background: #29abe2;
+}
+
+#contact_form{
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    background: white;
+    width: 250px;
+
+    border-top: 1px solid black;
+    box-shadow: 0px 0px 3px #9F9E9E;
+    font-family: 'aller';
+    height: 100vh;
+    z-index: 999;
+    display: none;
+}
+
+#contact_form #close_form{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 85%;
+    top: 190px;
+}
+
+#contact_form #close_form:hover{
+    cursor: pointer;
+}
+
+#contact_form #close_form:before{
+    font-family: 'icomoon';
+    content: "\e923";
+    top: 5px;
+    left: 9px;
+    position: relative;
+}
+
+#contact_form figure{
+    height: 180px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background: #29abe2;
+
+}
+
+#contact_form figure img {
+    height: 100%;
+    margin: 0px;
+}
+
+#contact_form p {
+    margin: 20px;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+#contact_form input,
+#contact_form textarea{
+    display: block;
+    margin: 20px;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 3px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+
+#contact_form #button{
+    background: #F8931F;
+    color: white;
+    border: none;
+    padding: 8px 0px;
+    border-radius: 5%;
+}
+
+
+#contact_button{
+    width: 60px;
+    height: 60px;
+    background: #F8931F;
+    border-radius: 50%;
+    color: white;
+    z-index: 80;
+    right: 10px;
+    position: fixed;
+    top: 80vh;
+}
+
+#contact_button:hover{
+    cursor: pointer;
+}
+
+#contact_button:before{
+    font-family: 'icomoon';
+    content: "\e925";
+    position: relative;
+    font-size: 3.9em;
+    top: -6px;
+    left: -2px;
+}
+
+
+footer{
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    z-index: 90;
+    height: 150px;
+    position: fixed;
+    bottom: -130px;
+    transition-duration: 0.4s;
+}
+
+footer:hover{
+    bottom: 0px;
+}
+
+footer::after{
+    content: "\e924";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-top: -30px;
+    border-radius: 50%;
+    background: black;
+    color: black;
+    transform: rotate(180deg);
+    font-size: 5em;
+    transition-duration: 0.4s;
+    text-shadow: 0px 15px 0px white;
+}
+
+footer:hover:after{
+    transform: rotate(0deg);
+    background: white;
+    color: black;
+    text-shadow: 0px 0px 0px black;
+}
+
+footer .rrss{
+    margin-top: 70px;
+    width: 100%;
+    height: 40px;
+}
+
+footer .rrss a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+footer .rrss a:before{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    font-size: 2em;
+    top: 5px;
+    left: 5px;
+    font-family: 'icomoon';
+}
+
+
+footer .rrss a:nth-child(1):before{
+    content: "\e602";
+}
+
+footer .rrss a:nth-child(2):before{
+    content: "\e806";
+}
+
+footer .rrss a:nth-child(3):before{
+    content: "\e900";
+}
+
+footer .rrss a:nth-child(4):before{
+    content: "\e607";
+}
+
+footer p{
+    font-size: 0.7em;
+    font-weight: lighter;
+    font-family: 'aller';
+}
+
+canvas{
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 
 /*Media Queries*/
 @media screen and (min-width: 480px){
-    body{
-        background: red;
+
+    #slider #home .mainlogo{
+        width: 270px;
+        left: 50%;
+        margin-left: -135px;
+        padding-bottom: 50px;
+    }
+  
+    #slider #home .mainlogo h2{
+        font-size: 1.4em;
+    }
+
+    #slider #home .mainlogo figure{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #slider #home .buttonspage > * {
+        width: 200px;
     }
 }
 
 @media screen and (min-width: 600px){
-    body{
-        background: orange;
-    }
-}
+
 
 @media screen and (min-width: 767px){
-    body{
-        background: yellow;
-    }
+
 
     header{
         height: 50px;
@@ -242,11 +528,17 @@ header #next_section img{
         top: 0px;
         left: 0px;
     }
-}
 
-@media screen and (min-width: 950px){
-    body{
-        background: green;
+    #contact_form{
+        top: 50px;
+        width: 400px;
+    }
+
+    #contact_button{
+        right: 35px;
     }
 }
 
+@media screen and (min-width: 950px){
+
+}

@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="">
+  	<meta name="description" content="">
+  	<meta name="author" content="jotajotavm.com">
+	  <meta name="owner" content="Sonia Carretero">
+	  <meta name="robots" content="index, follow"> <!-- indexacion -->
+   
     <title>Sonia Carretero</title>
     <script src="js/modernizr-custom.js"></script>
     <link rel="stylesheet" href="css/normalize.css" />
@@ -60,7 +66,25 @@
     </header>
 
     <div id="slider">
-      <section class="slide" id="home" style="display: block"></section>
+      <section class="slide" id="home" style="display: block">
+
+        <div class="mainanimation">
+          <div id="particles-js"></div>
+        </div>
+
+        <div class="mainlogo">
+            <h2>Soy una <strong>Diseñadora Gráfica</strong></h2>
+            <figure><img src="img/logo.png" alt=""></figure>
+
+            <div class="buttonspage">
+              <div id="contratame" onClick="displayFormContact('block')">
+                CONTRÁTAME
+              </div>
+              <a href="docs/cv2016.pdf" target="_blank">DESCARGAR CV</a>
+            </div>
+        </div>
+
+      </section>
       <section class="slide" id="aboutme" style="display: none"></section>
       <section class="slide" id="skills" style="display: none"></section>
       <section class="slide" id="portfolio" style="display: none"></section>
@@ -106,6 +130,26 @@
 
     <div id="contact_button" onClick="displayFormContact('block')"></div>
 
+    <footer>
+      <div class="rrss">
+        <a href="#">
+          <figure><img src="iconos/rrss.png" alt=""></figure>
+        </a>
+        <a href="#">
+          <figure><img src="iconos/rrss.png" alt=""></figure>
+        </a>
+        <a href="#">
+          <figure><img src="iconos/rrss.png" alt=""></figure>
+        </a>
+        <a href="#">
+          <figure><img src="iconos/rrss.png" alt=""></figure>
+        </a>
+      </div> 
+      <p>© 2016 All rights reserved | Privacity Policy</p>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/design.js"></script>
   </body>
 </html>

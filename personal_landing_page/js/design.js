@@ -147,3 +147,9 @@ function navSection(nav){
 
 
   }
+
+  function displayFormContact(status){
+    var formContact = document.getElementById("contact_form");
+    formContact.style.display = status;
+    
+  }
